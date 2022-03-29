@@ -1,0 +1,22 @@
+
+ .navegacion button  {background-color: whitesmoke;
+                      
+                      text-decoration: none;  
+                      padding: 10px 15px;
+                       display: block; 
+                        
+}   
+.navegacion  button {
+    float: left;
+    
+}
+.navegacion li {
+    display: none;
+
+}
+
+.navegacion:hover>li{
+    display: block;
+}
+
+
