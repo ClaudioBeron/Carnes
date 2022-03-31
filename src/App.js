@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
+import ItemListContainer from './Components/listaDeitems/ItemListContainer';
+
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar/>
+        <NavBar />
         
         
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
+        
+    <ItemListContainer greeting={`Lista de precios`}/>          
+        
+
+
       </header>
     </div>
+
   );
 }
 
