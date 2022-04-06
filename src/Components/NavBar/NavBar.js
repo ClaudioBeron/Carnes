@@ -1,4 +1,5 @@
 import "./NavBar.css"
+import Carro from "../CartWidget/CartWidget"
 
 
 
@@ -12,7 +13,7 @@ const NavBar = () => {
              <li> Pollo </li>
              <li> Cerdo </li>
         <button> Contactos </button>
-        <button className="Karrito" >9 </button>
+        <Carro label ="9"/>
          
     </nav>
 
