@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react"
 import { getProducts } from "../../asyncmock"
+import { getProductsById } from "../../asyncmock"
 import ItemList from "../ItemList/ItemList"
+import ItemDetail from "../ItemDetailContainer/ItemDetail"
+
+
 
 
 
@@ -14,6 +18,11 @@ const ItemListContainer = (props) =>{
 
         })
 
+
+    
+            
+
+
     },[])
     console.log(props.greeting)
     return(
@@ -24,4 +33,7 @@ const ItemListContainer = (props) =>{
 
     )
 }
+    
+   
+
 export default ItemListContainer

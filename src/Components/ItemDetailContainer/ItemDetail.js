@@ -1,15 +1,15 @@
 
 
-const Item = ({name ,img}) =>{
+const ItemDetail  = ({nombre,img}) => {
     return(
         <section>
             <picture>
-                <img src={img} alt={name}/>
+                <img src={img} alt={nombre}/>
             </picture>
-            <h3>{name}</h3>
+            <h3>{nombre}</h3>
             <button> Ver Detalle</button>
         </section>
     )
 }
 
-export default Item
+export default ItemDetail

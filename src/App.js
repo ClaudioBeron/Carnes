@@ -9,6 +9,7 @@ import Carro from './Components/CartWidget/CartWidget';
 
 
 
+
 function App() {
   const [show ,setShow] = useState (true)
 
@@ -22,11 +23,14 @@ function App() {
     <div className="App">
       <header className="App-header">
       <NavBar />
-       <ItemListContainer greeting={`Lista de precios`}/>  
+       <ItemListContainer greeting={`Lista de precios`}/> 
+        
                
 
     <button onClick ={()  => setShow(!show)}>{show ? `Desmontar contador` : `Montar contador`}</button>
     {show ? <Counter  initial ={0} stock ={10} onAdd={ handleOnAdd}/>:null }
+
+
 
 
       </header>
