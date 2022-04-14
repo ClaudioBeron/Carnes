@@ -5,6 +5,7 @@ import ItemListContainer from './Components/listaDeitems/ItemListContainer';
 import Counter from './Components/Counter/itemCount';
 import { useState } from 'react';
 import Carro from './Components/CartWidget/CartWidget';
+import {BrowserRouter, Routes ,Route ,Link} from 'react-router-dom'
 
 
 
@@ -22,8 +23,20 @@ function App() {
     
     <div className="App">
       <header className="App-header">
+      
+      <BrowserRouter>
       <NavBar />
-       <ItemListContainer greeting={`Lista de precios`}/> 
+ 
+      <Routes>
+        <Route path='/Carnes' element={<ItemListContainer/>}/>
+        <Route path='/Detalle' element={<ItemListContainer/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+
+
+      </Routes>
+       
+      </BrowserRouter>
+       
         
                
 

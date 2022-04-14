@@ -8,18 +8,11 @@ const productsById = [
 ]     
 
 
-export const getProducts =() => {
+export const getProducts =(categoryId) => {
     return new Promise (resolve => {
         setTimeout(()=>{
-            resolve(products)
+            resolve( categoryId ? products.filter(prod => prod.category === categoryId ) : products)
         },2000 )
     })
 }
 
-export const getProductsById =(id) => {
-    return new Promise (resolve => {
-        setTimeout(()=>{
-            resolve(productsById.find(prod => prod.id === 4))
-        },2000 )
-    })
-}
