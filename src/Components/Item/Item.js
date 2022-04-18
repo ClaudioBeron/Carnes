@@ -7,7 +7,8 @@ const Item = ({name ,img}) =>{
                 <img src={img} alt={name}/>
             </picture>
             <h3>{name}</h3>
-            <button> Ver Detalle</button>
+            
+
         </section>
     )
 }

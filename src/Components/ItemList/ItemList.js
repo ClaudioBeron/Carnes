@@ -1,6 +1,6 @@
 
 import Item from "../Item/Item"
-import ItemDetail from "../ItemDetailContainer/ItemDetail"
+
 
 const ItemList = ({products}) => {
     return(

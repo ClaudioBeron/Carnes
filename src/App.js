@@ -5,6 +5,7 @@ import ItemListContainer from './Components/listaDeitems/ItemListContainer';
 import Counter from './Components/Counter/itemCount';
 import { useState } from 'react';
 import Carro from './Components/CartWidget/CartWidget';
+import ItemDetail from './Components/ItemDetailContainer/ItemDetail';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <header className="App-header">
       <NavBar />
        <ItemListContainer greeting={`Lista de precios`}/> 
+       <ItemDetail/>
         
                
 
