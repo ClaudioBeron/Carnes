@@ -6,6 +6,7 @@ import Counter from './Components/Counter/itemCount';
 import { useState } from 'react';
 import Carro from './Components/CartWidget/CartWidget';
 import {BrowserRouter, Routes ,Route ,Link} from 'react-router-dom'
+import ItemDetail from './Components/ItemDetail/ItemDetail';
 
 
 
@@ -31,8 +32,8 @@ function App() {
         <Route path='/Carnes' element={<ItemListContainer/>}/>
         <Route path='/Detalle' element={<ItemListContainer/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-
-
+        <Route path= '/contactos' />
+        <Route path= '/detail/:productId' element={<ItemDetail/>}/>
       </Routes>
        
       </BrowserRouter>

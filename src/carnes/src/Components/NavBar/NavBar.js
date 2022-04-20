@@ -8,15 +8,13 @@ const NavBar = () => {
     return (<nav className="navegacion">
 
         
-        <button> Empresa </button>
-        <button className="product"> Productos </button> 
+        <button> <Link to= "./"> Home</Link> </button>
+        <button> <Link to ='/Carnes' className="product"> Productos </Link> </button>  
              <li> Vaca </li>
              <li> Pollo </li>
              <li> Cerdo </li>
-             <button>
-        <Link to ='/Carnes'>Mercaderia </Link>
-      </button>     
-        <button> Contactos </button>
+     
+        <button><Link to='/contactos'> Contactos </Link></button>
 
         <Carro label ="9"/>
          
