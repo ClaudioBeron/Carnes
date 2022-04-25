@@ -1,7 +1,13 @@
 import {useState} from "react"
 
 
-const Counter = ({initial ,stock ,onAdd}) =>{
+const Counter = ({onConfirm, initial ,stock ,onAdd}) =>{
+    const handleOnAdd =() =>{
+        console.log("agregar al carrito")
+    }
+        
+  
+
 
     const[count ,setCount]=useState (0)
 
@@ -26,7 +32,7 @@ const Counter = ({initial ,stock ,onAdd}) =>{
          <button onClick = {increment} > + </button>
          <p> {count}</p>
          <button onClick ={decrement} >- </button>
-         <div><button onClick={() => onAdd (count)}> Agregar al carrito </button></div>
+         <div><button onClick={() => onConfirm (count)}> Agregar al carrito </button></div>
          </div>
 
      )
