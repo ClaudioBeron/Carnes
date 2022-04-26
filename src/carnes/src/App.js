@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Carro from './Components/CartWidget/CartWidget';
 import {BrowserRouter, Routes ,Route ,Link} from 'react-router-dom'
 import ItemDetail from './Components/ItemDetail/ItemDetail';
+import Cart from './Components/Cart/Cart';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path= '/contactos' />
         <Route path= '/detail/:productId' element={<ItemDetail/>}/>
+        
       </Routes>
        
       </BrowserRouter>
