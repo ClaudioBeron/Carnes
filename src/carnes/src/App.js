@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from './Components/listaDeitems/ItemListContainer';
 import Counter from './Components/Counter/itemCount';
-import { useState } from 'react';
+import { useState,createContext } from 'react';
 import Carro from './Components/CartWidget/CartWidget';
 import {BrowserRouter, Routes ,Route ,Link} from 'react-router-dom'
 import ItemDetail from './Components/ItemDetail/ItemDetail';
@@ -11,9 +11,12 @@ import Cart from './Components/Cart/Cart';
 
 
 
-
+ export const Context = createContext()
 
 function App() {
+
+  const [cart,setCart]= useState([])
+  console.log(cart)
   const [show ,setShow] = useState (true)
 
   const handleOnAdd =(quantity) => {
@@ -25,6 +28,7 @@ function App() {
     
     <div className="App">
       <header className="App-header">
+        <Context.Provider value={{cart , setCart}}> 
       
       <BrowserRouter>
       <NavBar />
@@ -34,11 +38,12 @@ function App() {
         <Route path='/Detalle' element={<ItemListContainer/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path= '/contactos' />
-        <Route path= '/detail/:productId' element={<ItemDetail/>}/>
+        <Route path= '/detail/:productId' element={<ItemDetail setCart={setCart} cart= {cart}/>}/>
         
       </Routes>
        
       </BrowserRouter>
+      </Context.Provider>
        
         
                

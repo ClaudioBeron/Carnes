@@ -1,7 +1,8 @@
 import Counter from "../Counter/itemCount"
+import { useState ,useEffect } from "react"
 
 
-const ItemDetail = ({ id , name , img ,category ,description ,price ,stock}) =>{
+const ItemDetail = ({setCart, id , name , img ,category ,description ,price ,stock ,cart}) =>{
  
    return (
        <article className="CardItem">
